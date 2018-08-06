@@ -8,10 +8,9 @@ class Card < ApplicationRecord
   has_many :attachments, as: :filecontainer, dependent: :destroy
 
   before_validation :strip_title
-
-    def strip_title
-      self.title = title.strip
-    end
+  def strip_title
+    self.title = title.strip
+  end
   validates :title, presence: true, allow_blank: false
 
 #Card.by_labels(label_ids)  - returns cards that have labels with the following ids (label_ids)

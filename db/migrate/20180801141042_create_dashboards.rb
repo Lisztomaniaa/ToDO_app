@@ -5,8 +5,8 @@ class CreateDashboards < ActiveRecord::Migration[5.2]
           t.references :owner, index: true
           t.string :title, null: false
           t.integer :member, null: false
-           t.boolean :public, null: false
-           t.integer :owner_id
+          t.boolean :public, null: false
+          t.integer :owner_id
       t.timestamps
     end
   end
