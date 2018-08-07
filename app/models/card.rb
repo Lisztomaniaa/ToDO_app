@@ -2,8 +2,6 @@ class Card < ApplicationRecord
 
   belongs_to :lists, required: true
   has_and_belongs_to_many :labels
-  belongs_to :list, required: true
-  has_and_belongs_to_many :labels
   has_many :comments, dependent: :destroy
   has_and_belongs_to_many :users
   has_many :attachments, as: :filecontainer, dependent: :destroy
